@@ -1,5 +1,6 @@
 package br.com.uniamerica.lembretespessoa.service;
 
+import br.com.uniamerica.lembretespessoa.controller.PessoaController;
 import br.com.uniamerica.lembretespessoa.entity.PessoaEntity;
 import br.com.uniamerica.lembretespessoa.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +22,11 @@ public class PessoaService {
     public void deletaPessoa (PessoaEntity pessoa){
 
         pessoaRepository.delete(pessoa);
+    }
+
+
+    public PessoaEntity findById(Long id) {
+        PessoaEntity pessoa = new PessoaEntity(1L, "teste");
+        return pessoa;
     }
 }

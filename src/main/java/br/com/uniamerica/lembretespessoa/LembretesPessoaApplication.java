@@ -10,4 +10,6 @@ public class LembretesPessoaApplication {
 		SpringApplication.run(LembretesPessoaApplication.class, args);
 	}
 
+
+
 }

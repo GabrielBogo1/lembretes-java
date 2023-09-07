@@ -18,11 +18,9 @@ public class LembreteController {
     private LembreteService lembreteService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> findByIdPath(@PathVariable("id") final Long id){
-        final LembreteEntity lembrete = this.lembreteRepository.findById(id).orElse(null);
-        return lembrete == null
-                ? ResponseEntity.badRequest().body("Nenhum lembrete encontrado para o ID = " + id + ".")
-                : ResponseEntity.ok(lembrete);
+    public ResponseEntity<LembreteEntity> findByIdPath(@PathVariable Long id){
+        final LembreteEntity lembretes = this.lembreteRepository.findById(id).orElse(null);
+        return ResponseEntity.ok(lembretes);
     }
 
     @GetMapping("/lista")

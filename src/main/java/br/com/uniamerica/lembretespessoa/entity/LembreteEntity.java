@@ -9,6 +9,16 @@ import lombok.Setter;
 @Table (name = "tb_lembretes", schema = "public")
 public class LembreteEntity extends AbstractEntity {
 
+    public LembreteEntity(String nomeLembrete, Long id) {
+        this.id = id;
+        this.nomeLembrete = nomeLembrete;
+    }
+
+
+    @Getter
+    @Setter
+    private Long id;
+
     @Setter
     @ManyToOne
     @JoinColumn (name = "pessoa_id")
