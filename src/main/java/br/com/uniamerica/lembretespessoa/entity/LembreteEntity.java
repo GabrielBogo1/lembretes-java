@@ -17,6 +17,7 @@ public class LembreteEntity extends AbstractEntity {
 
     @Getter
     @Setter
+    @Id
     private Long id;
 
     @Setter
